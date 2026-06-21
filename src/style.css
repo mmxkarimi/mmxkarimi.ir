@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./fonts/vazirmatn.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/space-mono-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/space-mono-400-latin-ext.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/space-mono-700-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/space-mono-700-latin-ext.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@theme {
+  --color-lime: #C6F135;
+  --color-lime-dark: #9BBF1A;
+  --color-lime-light: #E8FC8A;
+  --color-ink: #1A1A1A;
+  --color-cream: #FAFAF5;
+  --color-offwhite: #F0F0E8;
+  --font-grotesk: 'Vazirmatn', 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --shadow-brutal: -4px 4px 0px 0px #1A1A1A;
+  --shadow-brutal-md: -6px 6px 0px 0px #1A1A1A;
+  --shadow-brutal-lg: -8px 8px 0px 0px #1A1A1A;
+  --shadow-brutal-hover: -2px 2px 0px 0px #1A1A1A;
+}
+
+a, button, [role="button"], input, textarea, select { cursor: pointer; }
+
+input:disabled, textarea:disabled, select:disabled {
+  background: #F0F0E8;
+  color: #999;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:disabled, a[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+::selection {
+  background: #C6F135;
+  color: #1A1A1A;
+}
+
+.brutal-border { border: 3px solid #1A1A1A; }
+.brutal-border-2 { border: 2px solid #1A1A1A; }
+
+.brutal-shadow { box-shadow: -4px 4px 0px 0px #1A1A1A; }
+.brutal-shadow-md { box-shadow: -6px 6px 0px 0px #1A1A1A; }
+.brutal-shadow-lg { box-shadow: -8px 8px 0px 0px #1A1A1A; }
+
+.brutal-btn {
+  border: 3px solid #1A1A1A;
+  box-shadow: -4px 4px 0px 0px #1A1A1A;
+  transition: all 0.15s ease;
+}
+.brutal-btn:hover {
+  box-shadow: -2px 2px 0px 0px #1A1A1A;
+  transform: translate(-2px, 2px);
+}
+.brutal-btn:active {
+  box-shadow: 0px 0px 0px 0px #1A1A1A;
+  transform: translate(-4px, 4px);
+}
+
+.brutal-card {
+  border: 3px solid #1A1A1A;
+  box-shadow: -6px 6px 0px 0px #1A1A1A;
+  transition: all 0.2s ease;
+}
+.brutal-card:hover {
+  box-shadow: -10px 10px 0px 0px #1A1A1A;
+  transform: translate(2px, -2px);
+}
+
+
+.skill-tag {
+  border: 2px solid #1A1A1A;
+  box-shadow: -3px 3px 0px 0px #1A1A1A;
+  transition: all 0.15s ease;
+}
+.skill-tag:hover {
+  background: #C6F135;
+  box-shadow: -1px 1px 0px 0px #1A1A1A;
+  transform: translate(-2px, 2px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.float-anim { animation: float 3s ease-in-out infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.blink { animation: blink 1s step-end infinite; }
+
+.nav-link {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: #C6F135;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.project-img {
+  transition: transform 0.5s ease;
+}
+.brutal-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Toast */
+.toast {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Scroll indicator */
+.scroll-progress {
+  transform-origin: right;
+  transform: scaleX(0);
+}
