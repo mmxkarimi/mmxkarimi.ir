@@ -9,7 +9,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="bg-cream text-ink font-grotesk overflow-x-hidden">
+<body class="bg-cream text-ink font-grotesk overflow-x-hidden dark:bg-ink dark:text-cream">
 
   <!-- Scroll Progress -->
   <div class="fixed top-0 right-0 w-full h-1 z-[100]">
@@ -17,7 +17,7 @@
   </div>
 
   <!-- NAVIGATION -->
-  <nav class="fixed top-0 w-full z-50 bg-cream/95 backdrop-blur-sm border-b-3 border-ink" style="border-bottom: 3px solid #1A1A1A;">
+  <nav class="fixed top-0 w-full z-50 bg-cream/95 dark:bg-ink/95 backdrop-blur-sm border-b-3 border-ink dark:border-lime" style="border-bottom: 3px solid #1A1A1A;">
     <div class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
       <a href="#hero" class="text-xl md:text-2xl font-bold font-mono tracking-tighter">
         M<span class="text-lime-dark">.</span>K
@@ -27,7 +27,12 @@
         <a href="#skills" class="nav-link text-sm">مهارت‌ها</a>
         <a href="#projects" class="nav-link text-sm">نمونه‌کار</a>
         <a href="#experience" class="nav-link text-sm">تجربه</a>
-        <a href="#contact" class="brutal-btn bg-lime px-5 py-2 text-sm font-bold uppercase tracking-wide">تماس</a>
+        <a href="#contact" class="brutal-btn bg-lime text-ink px-5 py-2 text-sm font-bold uppercase tracking-wide">تماس</a>
+        <a href="./en.html" class="brutal-btn bg-white dark:bg-ink/50 px-3 py-2 text-xs font-bold uppercase tracking-wide">EN</a>
+        <button id="darkModeToggle" class="brutal-btn bg-white dark:bg-ink px-3 py-2 text-xs font-bold" aria-label="Toggle Dark Mode">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:inline"></i>
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+        </button>
       </div>
       <button id="menuToggle" class="md:hidden brutal-border-2 p-2 bg-white" aria-label="Menu">
         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -36,7 +41,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 w-80 h-full bg-cream z-[60] brutal-border p-8 flex flex-col gap-6" style="border-right: 3px solid #1A1A1A; border-left: none; border-top: none; border-bottom: none;">
+  <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 w-80 h-full bg-cream dark:bg-ink z-[60] brutal-border p-8 flex flex-col gap-6" style="border-right: 3px solid #1A1A1A; border-left: none; border-top: none; border-bottom: none;">
     <div class="flex justify-between items-center mb-4">
       <span class="font-mono font-bold text-xl">منو</span>
       <button id="menuClose" class="brutal-border-2 p-2 bg-lime" aria-label="Close">
@@ -47,7 +52,8 @@
     <a href="#skills" class="mobile-link text-2xl font-bold uppercase tracking-wide py-2 border-b-2 border-ink/20 hover:text-lime-dark transition-colors">مهارت‌ها</a>
     <a href="#projects" class="mobile-link text-2xl font-bold uppercase tracking-wide py-2 border-b-2 border-ink/20 hover:text-lime-dark transition-colors">نمونه‌کار</a>
     <a href="#experience" class="mobile-link text-2xl font-bold uppercase tracking-wide py-2 border-b-2 border-ink/20 hover:text-lime-dark transition-colors">تجربه</a>
-    <a href="#contact" class="brutal-btn bg-lime px-5 py-3 text-center text-lg font-bold uppercase tracking-wide mt-4">گفتگو کنیم</a>
+    <a href="#contact" class="brutal-btn bg-lime text-ink px-5 py-3 text-center text-lg font-bold uppercase tracking-wide mt-4">گفتگو کنیم</a>
+    <a href="./en.html" class="brutal-btn bg-ink dark:bg-lime text-white dark:text-ink px-5 py-3 text-center text-lg font-bold uppercase tracking-wide mt-2">English</a>
   </div>
 
   <!-- HERO SECTION -->
@@ -56,8 +62,8 @@
       <div class="grid md:grid-cols-12 gap-6 md:gap-8 items-center">
         <!-- Left Content -->
         <div class="md:col-span-7 space-y-6 md:space-y-8">
-          <div class="inline-block brutal-border bg-lime px-4 py-1.5 font-mono text-xs uppercase tracking-widest">
-            <span class="inline-block w-2 h-2 bg-ink rounded-full ml-2 blink"></span>
+          <div class="inline-block brutal-border bg-lime text-ink px-4 py-1.5 font-mono text-xs uppercase tracking-widest">
+            <span class="inline-block w-2 h-2 bg-ink dark:bg-lime rounded-full ml-2 blink"></span>
             آماده همکاری
           </div>
 
@@ -73,7 +79,7 @@
           </h1>
 
           <p class="text-lg md:text-xl max-w-lg leading-relaxed">
-            توسعه‌دهنده وب و دسکتاپ، طراح، مدرس و مشاور. ساخت راهکارهای دیجیتال از ۲۰۲۱.
+            توسعه‌دهنده وب و دسکتاپ، طراح، مدرس و مشاور. ساخت راهکارهای دیجیتال از ۱۴۰۰.
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -81,9 +87,9 @@
               مشاهده نمونه‌کار
               <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
             </a>
-            <a href="#contact" class="brutal-btn bg-white px-7 py-3.5 font-bold uppercase tracking-wide text-sm flex items-center gap-2">
+            <a href="#contact" class="brutal-btn bg-white dark:bg-ink/50 px-7 py-3.5 font-bold uppercase tracking-wide text-sm flex items-center gap-2">
               سلام کنید
-              <i data-lucide="hand" class="w-4 h-4"></i>
+              <i data-lucide="handshake" class="w-4 h-4"></i>
             </a>
           </div>
 
@@ -106,12 +112,12 @@
 
         <!-- Right Image -->
         <div class="md:col-span-5 relative">
-          <div class="brutal-card bg-white p-3 relative">
+          <div class="brutal-card bg-white dark:bg-ink/50 p-3 relative">
             <div class="overflow-hidden brutal-border-2" style="border: 2px solid #1A1A1A;">
               <img src="./img/profile.webp" alt="محمد مهدی کریمی" class="w-full aspect-[3/4] object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
             </div>
-            <div class="absolute -top-4 -left-4 brutal-btn bg-lime w-20 h-20 flex items-center justify-center text-2xl font-bold -rotate-6">
-              👋
+            <div class="absolute -top-4 -left-4 brutal-btn bg-lime w-20 h-20 flex items-center justify-center -rotate-6">
+              <i data-lucide="handshake" class="w-8 h-8"></i>
             </div>
             <div class="absolute -bottom-3 -right-3 brutal-border bg-ink text-white px-4 py-2 font-mono text-xs uppercase tracking-wider float-anim">
               <i data-lucide="map-pin" class="w-3 h-3 inline ml-1"></i> ایران
@@ -136,30 +142,30 @@
           </div>
         </div>
         <div class="md:col-span-8 space-y-6">
-          <div class="brutal-card bg-white p-6 md:p-8">
+          <div class="brutal-card bg-white dark:bg-ink/50 p-6 md:p-8">
             <p class="text-lg md:text-xl leading-relaxed">
               من محمد مهدی کریمی هستم — برنامه‌نویس، توسعه‌دهنده، طراح، مدرس و مشاور. تخصص من در طراحی وب و توسعه اپلیکیشن‌های دسکتاپ و موبایل است. از سال ۲۰۲۱ شروع به یادگیری برنامه‌نویسی کردم و حدود ۴ سال است که به صورت حرفه‌ای در این حوزه فعالیت می‌کنم.
             </p>
           </div>
-          <div class="brutal-card bg-lime p-6 md:p-8">
+          <div class="brutal-card bg-lime text-ink p-6 md:p-8">
             <p class="text-lg md:text-xl leading-relaxed">
               رویکرد من؟ ترکیب کد تمیز با طراحی شهودی برای ساخت راهکارهای دیجیتالی که هم کاربردی و هم بصری جذاب هستند. من به یادگیری مستمر و ارائه کار باکیفیت که نیازهای مشتریان را برآورده کند، اعتقاد دارم.
             </p>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
-            <div class="brutal-card bg-white p-6">
+            <div class="brutal-card bg-white dark:bg-ink/50 p-6">
               <div class="w-12 h-12 brutal-border bg-lime flex items-center justify-center mb-4">
                 <i data-lucide="code-2" class="w-6 h-6"></i>
               </div>
               <h3 class="font-bold text-lg mb-2">توسعه</h3>
-              <p class="text-sm text-ink/70 leading-relaxed">توسعه فول‌استک با تکنولوژی‌های مدرن. از ASP.NET Core تا Rust، اپلیکیشن‌های قدرتمند می‌سازم.</p>
+              <p class="text-sm text-ink/70 dark:text-cream/70 leading-relaxed">توسعه فول‌استک با تکنولوژی‌های مدرن. از ASP.NET Core تا Rust، اپلیکیشن‌های قدرتمند می‌سازم.</p>
             </div>
-            <div class="brutal-card bg-white p-6">
+            <div class="brutal-card bg-white dark:bg-ink/50 p-6">
               <div class="w-12 h-12 brutal-border bg-lime flex items-center justify-center mb-4">
                 <i data-lucide="palette" class="w-6 h-6"></i>
               </div>
               <h3 class="font-bold text-lg mb-2">طراحی و مشاوره</h3>
-              <p class="text-sm text-ink/70 leading-relaxed">طراحی رابط کاربری، مشاوره پروژه و راهنمایی فنی برای تحقق ایده‌های شما.</p>
+              <p class="text-sm text-ink/70 dark:text-cream/70 leading-relaxed">طراحی رابط کاربری، مشاوره پروژه و راهنمایی فنی برای تحقق ایده‌های شما.</p>
             </div>
           </div>
         </div>
@@ -243,38 +249,38 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Project 1: Snowflake -->
-        <div class="brutal-card bg-white overflow-hidden">
+        <!-- Project 1: MMX-AI -->
+        <div class="brutal-card bg-white dark:bg-ink/50 overflow-hidden">
           <div class="overflow-hidden" style="border-bottom: 3px solid #1A1A1A;">
-            <img src="./img/flake.png" alt="Snowflake" class="project-img w-full aspect-[4/3] object-cover">
+            <img src="./img/flake.png" alt="MMX-AI" class="project-img w-full aspect-[4/3] object-cover">
           </div>
           <div class="p-6 md:p-8">
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="brutal-border-2 bg-lime px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">اپلیکیشن وب</span>
-              <span class="brutal-border-2 bg-white px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">ASP.NET Core</span>
+              <span class="brutal-border-2 bg-lime text-ink px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">اپلیکیشن آنلاین</span>
+              <span class="brutal-border-2 bg-white dark:bg-ink/50 px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">ASP.NET Core + React</span>
             </div>
-            <h3 class="text-2xl font-bold mb-2">Snowflake</h3>
-            <p class="text-ink/70 text-sm leading-relaxed mb-4">یک پروژه اپلیکیشن وب. در حال حاضر آفلاین است، اما مهارت‌های توسعه ASP.NET Core من را به نمایش می‌گذارد.</p>
+            <h3 class="text-2xl font-bold mb-2">MMX-AI</h3>
+            <p class="text-ink/70 dark:text-cream/70 text-sm leading-relaxed mb-4">پلتفرم آنلاین مبتنی بر ASP.NET Core و React. برای دریافت اشتراک آزمایشی با من تماس بگیرید.</p>
             <div class="flex gap-3">
-              <a href="#" class="brutal-btn bg-ink text-white px-4 py-2 text-xs font-bold uppercase tracking-wide flex items-center gap-2 opacity-50 cursor-not-allowed">
-                آفلاین <i data-lucide="alert-circle" class="w-3 h-3"></i>
+              <a href="https://mmx-ai.ir" class="brutal-btn bg-ink text-white px-4 py-2 text-xs font-bold uppercase tracking-wide flex items-center gap-2">
+                مشاهده پروژه <i data-lucide="external-link" class="w-3 h-3"></i>
               </a>
             </div>
           </div>
         </div>
 
         <!-- Project 2: TinyQR -->
-        <div class="brutal-card bg-white overflow-hidden">
+        <div class="brutal-card bg-white dark:bg-ink/50 overflow-hidden">
           <div class="overflow-hidden" style="border-bottom: 3px solid #1A1A1A;">
             <img src="./img/tinyqr.jpg" alt="TinyQR" class="project-img w-full aspect-[4/3] object-cover">
           </div>
           <div class="p-6 md:p-8">
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="brutal-border-2 bg-lime px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">ابزار</span>
-              <span class="brutal-border-2 bg-white px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">کد QR</span>
+              <span class="brutal-border-2 bg-lime text-ink px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">ابزار</span>
+              <span class="brutal-border-2 bg-white dark:bg-ink/50 px-3 py-1 font-mono text-xs uppercase tracking-wide" style="border: 2px solid #1A1A1A;">کد QR</span>
             </div>
             <h3 class="text-2xl font-bold mb-2">TinyQR</h3>
-            <p class="text-ink/70 text-sm leading-relaxed mb-4">ابزار ساخت و مدیریت کد QR. دمو را ببینید تا عملکرد آن را مشاهده کنید.</p>
+            <p class="text-ink/70 dark:text-cream/70 text-sm leading-relaxed mb-4">ابزار ساخت و مدیریت کد QR. دمو را ببینید تا عملکرد آن را مشاهده کنید.</p>
             <div class="flex gap-3">
               <a href="https://github.com/mmxkarimi/TinyQR" class="brutal-btn bg-ink text-white px-4 py-2 text-xs font-bold uppercase tracking-wide flex items-center gap-2">
                 مشاهده دمو <i data-lucide="play" class="w-3 h-3"></i>
@@ -287,7 +293,7 @@
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-16 md:py-24 bg-offwhite">
+  <section id="experience" class="py-16 md:py-24 bg-offwhite dark:bg-ink/80">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="mb-12">
         <span class="font-mono text-xs uppercase tracking-widest text-ink/50">۰۴</span>
@@ -298,34 +304,34 @@
 
       <div class="space-y-6">
         <!-- Exp 1 -->
-        <div class="brutal-card bg-white p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
+        <div class="brutal-card bg-white dark:bg-ink/50 p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
           <div class="md:col-span-3">
-            <span class="font-mono text-sm text-ink/50">۲۰۲۱ — تاکنون</span>
-            <div class="brutal-border-2 bg-lime px-3 py-1 inline-block font-mono text-xs uppercase tracking-wide mt-2" style="border: 2px solid #1A1A1A;">فعلی</div>
+            <span class="font-mono text-sm text-ink/50 dark:text-cream/50">۱۴۰۰ — تاکنون</span>
+            <div class="brutal-border-2 bg-lime text-ink px-3 py-1 inline-block font-mono text-xs uppercase tracking-wide mt-2" style="border: 2px solid #1A1A1A;">فعلی</div>
           </div>
           <div class="md:col-span-9">
             <h3 class="text-xl font-bold">توسعه‌دهنده و مشاور فریلنسر</h3>
             <p class="text-lime-dark font-bold">خوداشتغال</p>
-            <p class="text-sm text-ink/70 mt-3 leading-relaxed">فعالیت روی پروژه‌های متنوع وب، دسکتاپ و موبایل. ارائه مشاوره فنی و آموزش به مشتریان و دانشجویان.</p>
+            <p class="text-sm text-ink/70 dark:text-cream/70 mt-3 leading-relaxed">فعالیت روی پروژه‌های متنوع وب، دسکتاپ و موبایل. ارائه مشاوره فنی و آموزش به مشتریان و دانشجویان.</p>
           </div>
         </div>
 
         <!-- Exp 2 -->
-        <div class="brutal-card bg-white p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
+        <div class="brutal-card bg-white dark:bg-ink/50 p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
           <div class="md:col-span-3">
-            <span class="font-mono text-sm text-ink/50">۲۰۲۳ — ۲۰۲۴</span>
+            <span class="font-mono text-sm text-ink/50 dark:text-cream/50">۱۴۰۲ — ۱۴۰۳</span>
           </div>
           <div class="md:col-span-9">
             <h3 class="text-xl font-bold">مدرس</h3>
             <p class="text-lime-dark font-bold">دوره‌های برنامه‌نویسی</p>
-            <p class="text-sm text-ink/70 mt-3 leading-relaxed">تدریس مبانی برنامه‌نویسی، توسعه وب و توسعه اپلیکیشن‌های دسکتاپ به مبتدیان و متوسط‌ها.</p>
+            <p class="text-sm text-ink/70 dark:text-cream/70 mt-3 leading-relaxed">تدریس مبانی برنامه‌نویسی، توسعه وب و توسعه اپلیکیشن‌های دسکتاپ به مبتدیان و متوسط‌ها.</p>
           </div>
         </div>
       </div>
 
       <!-- Resume Download -->
       <div class="mt-8 text-center md:text-right">
-        <a class="brutal-btn bg-lime px-7 py-3.5 font-bold uppercase tracking-wide text-sm inline-flex items-center gap-2 opacity-50 cursor-not-allowed" aria-disabled="true">
+        <a class="brutal-btn bg-lime text-ink px-7 py-3.5 font-bold uppercase tracking-wide text-sm inline-flex items-center gap-2 opacity-50 cursor-not-allowed" aria-disabled="true">
           <i data-lucide="download" class="w-4 h-4"></i> دانلود رزومه
         </a>
       </div>
@@ -367,20 +373,20 @@
           </div>
         </div>
         <div class="md:col-span-7">
-          <form id="contactForm" class="brutal-card bg-white text-ink p-6 md:p-8 space-y-5">
+          <form id="contactForm" class="brutal-card bg-white dark:bg-ink/50 text-ink dark:text-cream p-6 md:p-8 space-y-5">
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block font-mono text-xs uppercase tracking-widest mb-2">نام *</label>
-                <input type="text" required placeholder="نام شما" class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime" style="border: 2px solid #1A1A1A;" disabled>
+                <input type="text" required placeholder="نام شما" class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime bg-white dark:bg-ink/50" style="border: 2px solid #1A1A1A;" disabled>
               </div>
               <div>
                 <label class="block font-mono text-xs uppercase tracking-widest mb-2">ایمیل *</label>
-                <input type="email" required placeholder="your.email@example.com" class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime" style="border: 2px solid #1A1A1A;" disabled>
+                <input type="email" required placeholder="your.email@example.com" class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime bg-white dark:bg-ink/50" style="border: 2px solid #1A1A1A;" disabled>
               </div>
             </div>
             <div>
               <label class="block font-mono text-xs uppercase tracking-widest mb-2">نوع پروژه</label>
-              <select class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime bg-white" style="border: 2px solid #1A1A1A;" disabled>
+              <select class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime bg-white dark:bg-ink/50" style="border: 2px solid #1A1A1A;" disabled>
                 <option>اپلیکیشن وب</option>
                 <option>اپلیکیشن دسکتاپ</option>
                 <option>اپلیکیشن موبایل</option>
@@ -390,7 +396,7 @@
             </div>
             <div>
               <label class="block font-mono text-xs uppercase tracking-widest mb-2">پیام *</label>
-              <textarea required rows="4" placeholder="درباره پروژه خود بگویید..." class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime resize-none" style="border: 2px solid #1A1A1A;" disabled></textarea>
+              <textarea required rows="4" placeholder="درباره پروژه خود بگویید..." class="w-full brutal-border-2 px-4 py-3 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-lime resize-none bg-white dark:bg-ink/50" style="border: 2px solid #1A1A1A;" disabled></textarea>
             </div>
             <button type="submit" class="brutal-btn bg-lime text-ink w-full px-7 py-4 font-bold uppercase tracking-wide text-sm flex items-center justify-center gap-2" disabled>
               ارسال پیام <i data-lucide="send" class="w-4 h-4"></i>
@@ -402,12 +408,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t-3 border-ink bg-cream py-8 md:py-12" style="border-top: 3px solid #1A1A1A;">
+  <footer class="border-t-3 border-ink dark:border-lime bg-cream dark:bg-ink py-8 md:py-12" style="border-top: 3px solid #1A1A1A;">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-4">
           <span class="text-2xl font-bold font-mono tracking-tighter">M<span class="text-lime-dark">.</span>K</span>
-          <span class="text-xs text-ink/50 font-mono">© ۲۰۲۵ محمد مهدی کریمی. تمامی حقوق محفوظ است.</span>
+          <span class="text-xs text-ink/50 font-mono">© ۱۴۰۵ محمد مهدی کریمی. تمامی حقوق محفوظ است.</span>
         </div>
         <div class="flex items-center gap-3">
           <a href="https://mmxkarimi.ir" class="brutal-border-2 w-10 h-10 flex items-center justify-center hover:bg-lime transition-colors" style="border: 2px solid #1A1A1A;" aria-label="Website">
