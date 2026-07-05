@@ -1,11 +1,25 @@
-import { createIcons, Menu, X, ArrowDownRight, MapPin, Code2, Palette, ArrowRight, Play, AlertCircle, Download, Send, Mail, Globe, CheckCircle, ArrowUp, Hand } from 'lucide'
+import { createIcons, Menu, X, ArrowDownRight, MapPin, Code2, Palette, ArrowRight, Play, AlertCircle, Download, Send, Mail, Globe, CheckCircle, ArrowUp, Hand, Sun, Moon, Handshake, ExternalLink } from 'lucide'
 
 createIcons({
   icons: {
     Menu, X, ArrowDownRight, MapPin, Code2, Palette,
     ArrowRight, Play, AlertCircle, Download, Send,
-    Mail, Globe, CheckCircle, ArrowUp, Hand,
+    Mail, Globe, CheckCircle, ArrowUp, Hand, Sun, Moon, Handshake, ExternalLink,
   },
+})
+
+// Dark Mode
+const darkModeToggle = document.getElementById('darkModeToggle')
+const html = document.documentElement
+
+if (localStorage.getItem('darkMode') === 'true' ||
+    (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  html.classList.add('dark')
+}
+
+darkModeToggle.addEventListener('click', () => {
+  html.classList.toggle('dark')
+  localStorage.setItem('darkMode', html.classList.contains('dark'))
 })
 
 const menuToggle = document.getElementById('menuToggle')
