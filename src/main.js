@@ -5,7 +5,7 @@ createIcons({
     Menu, X, ArrowDown, ArrowUp, ArrowUpRight, MapPin, Code2, Palette,
     Mail, Globe, Sun, Moon, BookOpen, NotebookPen, Music,
   },
-  attrs: { 'stroke-width': 1.75 },
+  attrs: { 'stroke-width': 2.5 },
 })
 
 // Dark Mode (the initial class is set by the inline script in <head>)

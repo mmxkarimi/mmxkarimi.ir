@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohammad Mehdi Karimi — Developer & Consultant</title>
   <meta name="description" content="Mohammad Mehdi Karimi — web and desktop developer, designer, instructor and consultant based in Iran.">
-  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0E0F10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mohammad Mehdi Karimi — Developer & Consultant">
   <meta property="og:description" content="Web and desktop developer, designer, instructor and consultant based in Iran.">
@@ -29,12 +29,12 @@
 <body class="overflow-x-hidden">
 
   <!-- Scroll Progress -->
-  <div class="fixed top-0 start-0 w-full h-0.5 z-[100]" aria-hidden="true">
-    <div id="scrollProgress" class="scroll-progress h-full bg-accent-text"></div>
+  <div class="fixed top-0 start-0 w-full h-1 z-[100]" aria-hidden="true">
+    <div id="scrollProgress" class="scroll-progress h-full bg-lime"></div>
   </div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b-[3px] border-line bg-bg">
     <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
       <a href="#top" class="font-mono text-lg font-bold tracking-tight" aria-label="Mohammad Mehdi Karimi — back to top">
         M<span class="text-accent-text">.</span>K
@@ -60,12 +60,12 @@
     </div>
 
     <!-- Mobile Menu -->
-    <nav id="mobileMenu" class="md:hidden border-t border-line bg-bg" aria-label="Mobile" hidden>
+    <nav id="mobileMenu" class="md:hidden border-t-[3px] border-line bg-bg" aria-label="Mobile" hidden>
       <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col">
-        <a href="#about" class="py-3 font-medium border-b border-line">About</a>
-        <a href="#skills" class="py-3 font-medium border-b border-line">Skills</a>
-        <a href="#projects" class="py-3 font-medium border-b border-line">Projects</a>
-        <a href="#experience" class="py-3 font-medium border-b border-line">Experience</a>
+        <a href="#about" class="py-3 font-mono font-bold uppercase text-sm border-b-2 border-line">About</a>
+        <a href="#skills" class="py-3 font-mono font-bold uppercase text-sm border-b-2 border-line">Skills</a>
+        <a href="#projects" class="py-3 font-mono font-bold uppercase text-sm border-b-2 border-line">Projects</a>
+        <a href="#experience" class="py-3 font-mono font-bold uppercase text-sm border-b-2 border-line">Experience</a>
         <a href="#contact" class="btn btn-primary mt-4">Let's talk</a>
       </div>
     </nav>
@@ -78,12 +78,12 @@
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
           <div class="md:col-span-7">
-            <div class="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm text-muted">
+            <span class="sticker sticker-lime">
               <span class="status-dot"></span>
               Available for work
-            </div>
+            </span>
 
-            <h1 class="display text-4xl sm:text-5xl lg:text-6xl font-bold mt-6">
+            <h1 class="display text-5xl sm:text-6xl lg:text-7xl mt-8">
               Mohammad Mehdi Karimi
             </h1>
 
@@ -100,16 +100,16 @@
             </div>
 
             <!-- Stats -->
-            <dl class="grid grid-cols-3 gap-6 border-t border-line mt-12 pt-8 max-w-lg">
-              <div>
+            <dl class="grid grid-cols-3 border-[3px] border-line bg-surface shadow-[var(--sh)] mt-12 max-w-lg">
+              <div class="p-4 border-e-[3px] border-line last:border-e-0">
                 <dd class="font-mono text-2xl md:text-3xl font-bold">4+</dd>
                 <dt class="text-sm text-muted mt-1">Years of experience</dt>
               </div>
-              <div>
+              <div class="p-4 border-e-[3px] border-line last:border-e-0">
                 <dd class="font-mono text-2xl md:text-3xl font-bold">10+</dd>
                 <dt class="text-sm text-muted mt-1">Projects</dt>
               </div>
-              <div>
+              <div class="p-4 border-e-[3px] border-line last:border-e-0">
                 <dd class="font-mono text-2xl md:text-3xl font-bold">5+</dd>
                 <dt class="text-sm text-muted mt-1">Clients</dt>
               </div>
@@ -118,23 +118,36 @@
 
           <!-- Portrait -->
           <figure class="md:col-span-5 relative w-full max-w-sm mx-auto md:max-w-none">
-            <div class="absolute inset-0 translate-x-3 translate-y-3 rtl:-translate-x-3 rounded-2xl border border-line" aria-hidden="true"></div>
-            <img src="./img/profile.webp" alt="Mohammad Mehdi Karimi" class="relative w-full aspect-[4/5] object-cover rounded-2xl border border-line bg-subtle">
-            <figcaption class="absolute bottom-4 start-4 inline-flex items-center gap-1.5 rounded-full border border-line bg-surface/90 backdrop-blur px-3 py-1.5 text-xs font-medium">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-text"></i> Iran
+            <img src="./img/profile.webp" alt="Mohammad Mehdi Karimi" class="relative w-full aspect-[4/5] object-cover border-[3px] border-line bg-subtle shadow-[10px_10px_0_0_var(--color-lime)]">
+            <figcaption class="sticker sticker-pop absolute -bottom-3 start-4">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Iran
             </figcaption>
           </figure>
         </div>
       </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+        <span>Web · Desktop · Mobile · Design · Consulting · Since 2021 ·</span>
+      </div>
+    </div>
+
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-16 md:py-24 border-t border-line" data-reveal>
+    <section id="about" class="py-16 md:py-24" data-reveal>
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="grid md:grid-cols-12 gap-8 md:gap-12">
           <div class="md:col-span-4">
             <p class="eyebrow">01 / About</p>
-            <h2 class="display text-3xl md:text-4xl font-bold mt-3">About me</h2>
+            <h2 class="display text-3xl md:text-4xl mt-4">About me</h2>
           </div>
           <div class="md:col-span-8">
             <div class="space-y-5 text-lg leading-relaxed">
@@ -150,14 +163,14 @@
                 <div class="icon-tile">
                   <i data-lucide="code-2" class="w-5 h-5"></i>
                 </div>
-                <h3 class="font-semibold text-lg mt-4">Development</h3>
+                <h3 class="font-extrabold text-lg mt-4">Development</h3>
                 <p class="text-sm text-muted leading-relaxed mt-2">Full-stack development with modern technologies. From ASP.NET Core to Rust, I build powerful applications.</p>
               </div>
               <div class="card p-6">
                 <div class="icon-tile">
                   <i data-lucide="palette" class="w-5 h-5"></i>
                 </div>
-                <h3 class="font-semibold text-lg mt-4">Design &amp; Consulting</h3>
+                <h3 class="font-extrabold text-lg mt-4">Design &amp; Consulting</h3>
                 <p class="text-sm text-muted leading-relaxed mt-2">UI design, project consulting, and technical guidance to bring your ideas to life.</p>
               </div>
             </div>
@@ -167,20 +180,20 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills" class="py-16 md:py-24 border-t border-line bg-subtle" data-reveal>
+    <section id="skills" class="py-16 md:py-24 border-t-[3px] border-line bg-subtle" data-reveal>
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
             <p class="eyebrow">02 / Skills</p>
-            <h2 class="display text-3xl md:text-4xl font-bold mt-3">Skills &amp; tools</h2>
+            <h2 class="display text-3xl md:text-4xl mt-4">Skills &amp; tools</h2>
           </div>
           <p class="text-muted max-w-md text-sm leading-relaxed">Technologies and tools I use to build web, desktop, and mobile applications.</p>
         </div>
 
-        <div class="border-y border-line divide-y divide-line">
+        <div class="border-y-[3px] border-line divide-y-2 divide-line">
           <!-- Web Development -->
           <div class="grid md:grid-cols-12 gap-3 md:gap-8 py-6">
-            <h3 class="md:col-span-3 font-semibold">Web Development</h3>
+            <h3 class="md:col-span-3 font-extrabold">Web Development</h3>
             <div class="md:col-span-9 flex flex-wrap gap-2">
               <span class="chip">HTML</span>
               <span class="chip">CSS</span>
@@ -194,7 +207,7 @@
           </div>
           <!-- Desktop Development -->
           <div class="grid md:grid-cols-12 gap-3 md:gap-8 py-6">
-            <h3 class="md:col-span-3 font-semibold">Desktop Development</h3>
+            <h3 class="md:col-span-3 font-extrabold">Desktop Development</h3>
             <div class="md:col-span-9 flex flex-wrap gap-2">
               <span class="chip">C# (WPF)</span>
               <span class="chip">GTK (Rust, C#)</span>
@@ -203,7 +216,7 @@
           </div>
           <!-- Database -->
           <div class="grid md:grid-cols-12 gap-3 md:gap-8 py-6">
-            <h3 class="md:col-span-3 font-semibold">Database</h3>
+            <h3 class="md:col-span-3 font-extrabold">Database</h3>
             <div class="md:col-span-9 flex flex-wrap gap-2">
               <span class="chip">SQL Server</span>
               <span class="chip">MySQL</span>
@@ -212,7 +225,7 @@
           </div>
           <!-- Other -->
           <div class="grid md:grid-cols-12 gap-3 md:gap-8 py-6">
-            <h3 class="md:col-span-3 font-semibold">Other</h3>
+            <h3 class="md:col-span-3 font-extrabold">Other</h3>
             <div class="md:col-span-9 flex flex-wrap gap-2">
               <span class="chip">Docker</span>
               <span class="chip">Git</span>
@@ -230,27 +243,27 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="py-16 md:py-24 border-t border-line" data-reveal>
+    <section id="projects" class="py-16 md:py-24 border-t-[3px] border-line" data-reveal>
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="mb-10">
           <p class="eyebrow">03 / Projects</p>
-          <h2 class="display text-3xl md:text-4xl font-bold mt-3">Selected projects</h2>
+          <h2 class="display text-3xl md:text-4xl mt-4">Selected projects</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 md:gap-8">
           <!-- Project 1: ChatMMX -->
           <article class="card card-hover overflow-hidden">
-            <img src="./img/flake.png" alt="ChatMMX" loading="lazy" class="w-full aspect-[4/3] object-cover border-b border-line bg-subtle">
+            <img src="./img/flake.png" alt="ChatMMX" loading="lazy" class="w-full aspect-[4/3] object-cover border-b-[3px] border-line bg-subtle">
             <div class="p-6 md:p-7">
               <div class="flex flex-wrap gap-2">
                 <span class="chip chip-sm">Online App</span>
                 <span class="chip chip-sm">ASP.NET Core + React</span>
               </div>
-              <h3 class="text-xl font-semibold mt-4">
+              <h3 class="text-xl font-extrabold mt-4">
                 <a href="https://mmx-ai.ir" target="_blank" rel="noopener" class="after:absolute after:inset-0">ChatMMX</a>
               </h3>
               <p class="text-muted text-sm leading-relaxed mt-2">Online platform built with ASP.NET Core and React. Contact me to get a test subscription.</p>
-              <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text mt-5">
+              <p class="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase text-accent-text mt-5">
                 View project <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4"></i>
               </p>
             </div>
@@ -258,17 +271,17 @@
 
           <!-- Project 2: TinyQR -->
           <article class="card card-hover overflow-hidden">
-            <img src="./img/tinyqr.jpg" alt="TinyQR" loading="lazy" class="w-full aspect-[4/3] object-cover border-b border-line bg-subtle">
+            <img src="./img/tinyqr.jpg" alt="TinyQR" loading="lazy" class="w-full aspect-[4/3] object-cover border-b-[3px] border-line bg-subtle">
             <div class="p-6 md:p-7">
               <div class="flex flex-wrap gap-2">
                 <span class="chip chip-sm">Tool</span>
                 <span class="chip chip-sm">QR Code</span>
               </div>
-              <h3 class="text-xl font-semibold mt-4">
+              <h3 class="text-xl font-extrabold mt-4">
                 <a href="https://github.com/mmxkarimi/TinyQR" target="_blank" rel="noopener" class="after:absolute after:inset-0">TinyQR</a>
               </h3>
               <p class="text-muted text-sm leading-relaxed mt-2">QR code creation and management tool. Check out the demo to see it in action.</p>
-              <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text mt-5">
+              <p class="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase text-accent-text mt-5">
                 View demo <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4"></i>
               </p>
             </div>
@@ -276,7 +289,7 @@
 
           <!-- Project 3: Zodiac -->
           <article class="card card-hover overflow-hidden">
-            <div class="w-full aspect-[4/3] flex items-center justify-center border-b border-line bg-subtle text-muted" aria-hidden="true">
+            <div class="w-full aspect-[4/3] flex items-center justify-center border-b-[3px] border-line bg-lime text-ink" aria-hidden="true">
               <i data-lucide="book-open" class="w-16 h-16"></i>
             </div>
             <div class="p-6 md:p-7">
@@ -284,11 +297,11 @@
                 <span class="chip chip-sm">MCP Server</span>
                 <span class="chip chip-sm">Rust</span>
               </div>
-              <h3 class="text-xl font-semibold mt-4">
+              <h3 class="text-xl font-extrabold mt-4">
                 <a href="https://github.com/mmxkarimi/zodiac" target="_blank" rel="noopener" class="after:absolute after:inset-0">Zodiac</a>
               </h3>
               <p class="text-muted text-sm leading-relaxed mt-2">A small, fast MCP server that lets AI tools search and read ZIM archives like offline Wikipedia, straight from disk with no internet.</p>
-              <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text mt-5">
+              <p class="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase text-accent-text mt-5">
                 View on GitHub <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4"></i>
               </p>
             </div>
@@ -296,7 +309,7 @@
 
           <!-- Project 4: NoteMax -->
           <article class="card card-hover overflow-hidden">
-            <div class="w-full aspect-[4/3] flex items-center justify-center border-b border-line bg-subtle text-muted" aria-hidden="true">
+            <div class="w-full aspect-[4/3] flex items-center justify-center border-b-[3px] border-line bg-pop text-ink" aria-hidden="true">
               <i data-lucide="notebook-pen" class="w-16 h-16"></i>
             </div>
             <div class="p-6 md:p-7">
@@ -304,11 +317,11 @@
                 <span class="chip chip-sm">Android App</span>
                 <span class="chip chip-sm">Kotlin + Jetpack Compose</span>
               </div>
-              <h3 class="text-xl font-semibold mt-4">
+              <h3 class="text-xl font-extrabold mt-4">
                 <a href="https://github.com/mmxkarimi/notemax" target="_blank" rel="noopener" class="after:absolute after:inset-0">NoteMax</a>
               </h3>
               <p class="text-muted text-sm leading-relaxed mt-2">An expressive Material 3 note-taking app with dynamic color, checklists, markdown rendering and RTL support.</p>
-              <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text mt-5">
+              <p class="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase text-accent-text mt-5">
                 View on GitHub <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4"></i>
               </p>
             </div>
@@ -316,7 +329,7 @@
 
           <!-- Project 5: Shockwave -->
           <article class="card card-hover overflow-hidden">
-            <div class="w-full aspect-[4/3] flex items-center justify-center border-b border-line bg-subtle text-muted" aria-hidden="true">
+            <div class="w-full aspect-[4/3] flex items-center justify-center border-b-[3px] border-line bg-fg text-bg" aria-hidden="true">
               <i data-lucide="music" class="w-16 h-16"></i>
             </div>
             <div class="p-6 md:p-7">
@@ -324,11 +337,11 @@
                 <span class="chip chip-sm">Android App</span>
                 <span class="chip chip-sm">Kotlin + Jetpack Compose</span>
               </div>
-              <h3 class="text-xl font-semibold mt-4">
+              <h3 class="text-xl font-extrabold mt-4">
                 <a href="https://github.com/mmxkarimi/shockwave" target="_blank" rel="noopener" class="after:absolute after:inset-0">Shockwave</a>
               </h3>
               <p class="text-muted text-sm leading-relaxed mt-2">A fast, battery-friendly local music player for Android 10+ with playlists, a queue and synced lyrics.</p>
-              <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text mt-5">
+              <p class="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase text-accent-text mt-5">
                 View on GitHub <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4"></i>
               </p>
             </div>
@@ -338,25 +351,25 @@
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="py-16 md:py-24 border-t border-line bg-subtle" data-reveal>
+    <section id="experience" class="py-16 md:py-24 border-t-[3px] border-line bg-subtle" data-reveal>
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="mb-10">
           <p class="eyebrow">04 / Experience</p>
-          <h2 class="display text-3xl md:text-4xl font-bold mt-3">Work experience</h2>
+          <h2 class="display text-3xl md:text-4xl mt-4">Work experience</h2>
         </div>
 
-        <div class="border-y border-line divide-y divide-line">
+        <div class="border-y-[3px] border-line divide-y-2 divide-line">
           <!-- Exp 1 -->
           <div class="grid md:grid-cols-12 gap-3 md:gap-8 py-8">
             <div class="md:col-span-3 flex md:flex-col items-center md:items-start gap-3">
               <span class="font-mono text-sm text-muted">2021 — Present</span>
-              <span class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-2.5 py-0.5 text-xs font-medium">
+              <span class="sticker sticker-lime sticker-flat">
                 <span class="status-dot"></span> Current
               </span>
             </div>
             <div class="md:col-span-9">
-              <h3 class="text-xl font-semibold">Freelance Developer &amp; Consultant</h3>
-              <p class="text-accent-text font-medium mt-1">Self-employed</p>
+              <h3 class="text-xl font-extrabold">Freelance Developer &amp; Consultant</h3>
+              <p class="font-mono text-sm text-accent-text font-bold mt-1">Self-employed</p>
               <p class="text-muted leading-relaxed mt-3 max-w-2xl">Working on diverse web, desktop, and mobile projects. Providing technical consulting and training to clients and students.</p>
             </div>
           </div>
@@ -367,8 +380,8 @@
               <span class="font-mono text-sm text-muted">2023 — 2024</span>
             </div>
             <div class="md:col-span-9">
-              <h3 class="text-xl font-semibold">Instructor</h3>
-              <p class="text-accent-text font-medium mt-1">Programming Courses</p>
+              <h3 class="text-xl font-extrabold">Instructor</h3>
+              <p class="font-mono text-sm text-accent-text font-bold mt-1">Programming Courses</p>
               <p class="text-muted leading-relaxed mt-3 max-w-2xl">Teaching programming fundamentals, web development, and desktop application development to beginners and intermediates.</p>
             </div>
           </div>
@@ -377,48 +390,48 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-16 md:py-24 border-t border-line" data-reveal>
+    <section id="contact" class="py-16 md:py-24 border-t-[3px] border-line" data-reveal>
       <div class="max-w-6xl mx-auto px-5 md:px-8">
         <div class="cta-panel p-5 sm:p-8 md:p-14 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
           <div class="min-w-0 md:col-span-6">
-            <p class="eyebrow !text-lime">05 / Contact</p>
-            <h2 class="display text-3xl md:text-5xl font-bold mt-3">
+            <p class="eyebrow !bg-lime !text-ink">05 / Contact</p>
+            <h2 class="display text-3xl md:text-5xl mt-4">
               Let's build <span class="text-lime">together.</span>
             </h2>
-            <p class="text-white/65 leading-relaxed max-w-md mt-5">
+            <p class="text-paper/80 leading-relaxed max-w-md mt-5">
               Have a project in mind? Need a custom application or consulting? I'd love to hear from you.
             </p>
           </div>
           <div class="min-w-0 md:col-span-6 space-y-3">
-            <a href="mailto:karimi.mohamm.mahd@gmail.com" class="group flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-colors hover:bg-white/5">
-              <span class="flex w-11 h-11 shrink-0 items-center justify-center rounded-lg bg-white/10">
+            <a href="mailto:karimi.mohamm.mahd@gmail.com" class="cta-link group flex items-center gap-4 p-4">
+              <span class="flex w-11 h-11 shrink-0 items-center justify-center border-2 border-current">
                 <i data-lucide="mail" class="w-5 h-5"></i>
               </span>
               <span class="min-w-0 flex-1">
-                <span class="block text-xs text-white/55">Email</span>
+                <span class="block font-mono text-xs uppercase opacity-70">Email</span>
                 <span class="block font-mono text-sm break-all" dir="ltr">karimi.mohamm.mahd@gmail.com</span>
               </span>
-              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0 text-white/40 transition-colors group-hover:text-lime"></i>
+              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0"></i>
             </a>
-            <a href="https://github.com/mmxkarimi" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-colors hover:bg-white/5">
-              <span class="flex w-11 h-11 shrink-0 items-center justify-center rounded-lg bg-white/10">
+            <a href="https://github.com/mmxkarimi" target="_blank" rel="noopener" class="cta-link group flex items-center gap-4 p-4">
+              <span class="flex w-11 h-11 shrink-0 items-center justify-center border-2 border-current">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
               </span>
               <span class="min-w-0 flex-1">
-                <span class="block text-xs text-white/55">GitHub</span>
+                <span class="block font-mono text-xs uppercase opacity-70">GitHub</span>
                 <span class="block font-mono text-sm break-all" dir="ltr">github.com/mmxkarimi</span>
               </span>
-              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0 text-white/40 transition-colors group-hover:text-lime"></i>
+              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0"></i>
             </a>
-            <a href="https://mmxkarimi.ir" class="group flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-colors hover:bg-white/5">
-              <span class="flex w-11 h-11 shrink-0 items-center justify-center rounded-lg bg-white/10">
+            <a href="https://mmxkarimi.ir" class="cta-link group flex items-center gap-4 p-4">
+              <span class="flex w-11 h-11 shrink-0 items-center justify-center border-2 border-current">
                 <i data-lucide="globe" class="w-5 h-5"></i>
               </span>
               <span class="min-w-0 flex-1">
-                <span class="block text-xs text-white/55">Website</span>
+                <span class="block font-mono text-xs uppercase opacity-70">Website</span>
                 <span class="block font-mono text-sm break-all" dir="ltr">mmxkarimi.ir</span>
               </span>
-              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0 text-white/40 transition-colors group-hover:text-lime"></i>
+              <i data-lucide="arrow-up-right" class="flip-rtl w-4 h-4 shrink-0"></i>
             </a>
           </div>
         </div>
@@ -428,11 +441,11 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-line py-8">
+  <footer class="footer-band py-8">
     <div class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
       <div class="flex items-center gap-4">
-        <span class="font-mono text-lg font-bold tracking-tight">M<span class="text-accent-text">.</span>K</span>
-        <span class="text-sm text-muted">© 2026 Mohammad Mehdi Karimi. All rights reserved.</span>
+        <span class="font-mono text-lg font-bold tracking-tight">M<span class="text-lime">.</span>K</span>
+        <span class="text-sm opacity-80">© 2026 Mohammad Mehdi Karimi. All rights reserved.</span>
       </div>
       <div class="flex items-center gap-2">
         <a href="https://github.com/mmxkarimi" target="_blank" rel="noopener" class="btn-icon" aria-label="GitHub">
@@ -446,7 +459,7 @@
         </a>
       </div>
     </div>
-    <p class="max-w-6xl mx-auto px-5 md:px-8 mt-6 text-xs text-muted text-center">Co-developed with Claude Fable 5.2</p>
+    <p class="max-w-6xl mx-auto px-5 md:px-8 mt-6 font-mono text-xs opacity-60 text-center">Co-developed with Claude Fable 5.2</p>
   </footer>
 
   <script type="module" src="./main.js"></script>
