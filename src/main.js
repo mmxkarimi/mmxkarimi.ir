@@ -1,105 +1,70 @@
-import { createIcons, Menu, X, ArrowDownRight, MapPin, Code2, Palette, ArrowRight, Play, AlertCircle, Download, Send, Mail, Globe, CheckCircle, ArrowUp, Hand, Sun, Moon, Handshake, ExternalLink } from 'lucide'
+import { createIcons, Menu, X, ArrowDown, ArrowUp, ArrowUpRight, MapPin, Code2, Palette, Mail, Globe, Sun, Moon, BookOpen, NotebookPen, Music } from 'lucide'
 
 createIcons({
   icons: {
-    Menu, X, ArrowDownRight, MapPin, Code2, Palette,
-    ArrowRight, Play, AlertCircle, Download, Send,
-    Mail, Globe, CheckCircle, ArrowUp, Hand, Sun, Moon, Handshake, ExternalLink,
+    Menu, X, ArrowDown, ArrowUp, ArrowUpRight, MapPin, Code2, Palette,
+    Mail, Globe, Sun, Moon, BookOpen, NotebookPen, Music,
   },
+  attrs: { 'stroke-width': 1.75 },
 })
 
-// Dark Mode
-const darkModeToggle = document.getElementById('darkModeToggle')
+// Dark Mode (the initial class is set by the inline script in <head>)
 const html = document.documentElement
 
-if (localStorage.getItem('darkMode') === 'true' ||
-    (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  html.classList.add('dark')
-}
-
-darkModeToggle.addEventListener('click', () => {
+document.getElementById('themeToggle').addEventListener('click', () => {
   html.classList.toggle('dark')
   localStorage.setItem('darkMode', html.classList.contains('dark'))
 })
 
 const menuToggle = document.getElementById('menuToggle')
-const menuClose = document.getElementById('menuClose')
 const mobileMenu = document.getElementById('mobileMenu')
-const mobileLinks = document.querySelectorAll('.mobile-link')
+
+const setMenuOpen = (open) => {
+  mobileMenu.hidden = !open
+  menuToggle.setAttribute('aria-expanded', String(open))
+}
 
 menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.add('open')
+  setMenuOpen(mobileMenu.hidden)
 })
 
-menuClose.addEventListener('click', () => {
-  mobileMenu.classList.remove('open')
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => setMenuOpen(false))
 })
 
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open')
-  })
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.hidden &&
+      !mobileMenu.contains(e.target) &&
+      !menuToggle.contains(e.target)) {
+    setMenuOpen(false)
+  }
 })
 
-const contactForm = document.getElementById('contactForm')
-const toast = document.getElementById('toast')
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-  toast.classList.add('show')
-  contactForm.reset()
-  setTimeout(() => {
-    toast.classList.remove('show')
-  }, 4000)
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenuOpen(false)
 })
 
 const scrollProgress = document.getElementById('scrollProgress')
 
 window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY
   const docHeight = document.documentElement.scrollHeight - window.innerHeight
-  const scrollPercent = scrollTop / docHeight
+  const scrollPercent = docHeight > 0 ? window.scrollY / docHeight : 0
   scrollProgress.style.transform = `scaleX(${scrollPercent})`
-})
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute('href'))
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  })
-})
-
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px',
-}
+}, { passive: true })
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1'
-      entry.target.style.transform = 'translateY(0)'
+      entry.target.classList.add('is-visible')
+      observer.unobserve(entry.target)
     }
   })
-}, observerOptions)
-
-document.querySelectorAll('section').forEach(section => {
-  section.style.opacity = '0'
-  section.style.transform = 'translateY(30px)'
-  section.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
-  observer.observe(section)
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px',
 })
 
-document.getElementById('hero').style.opacity = '1'
-document.getElementById('hero').style.transform = 'translateY(0)'
-
-document.addEventListener('click', (e) => {
-  if (mobileMenu.classList.contains('open') &&
-      !mobileMenu.contains(e.target) &&
-      !menuToggle.contains(e.target)) {
-    mobileMenu.classList.remove('open')
-  }
+document.querySelectorAll('[data-reveal]').forEach(el => {
+  el.classList.add('reveal')
+  observer.observe(el)
 })
